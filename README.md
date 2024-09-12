@@ -1,14 +1,15 @@
-## Website Mobil Bekas
+## **FUFUFAFA** Website Mobil Bekas
 
 ### CRUD
-Create Data Mobil <br>
-Read Data Mobil <br>
-Update Data Mobil  <br>
-Delete Data Mobil <br>
+- Create Data Mobil <br>
+- Read Data Mobil <br>
+- Update Data Mobil  <br>
+- Delete Data Mobil <br>
 
 ### Fitur Tambahan
-Filter by Harga <br>
-Filter by Nama <br>
+- Filter by Harga <br>
+- Filter by Nama <br>
+- Filter by Brand <br>
 
 ### Team 2 ~~(team panitia)~~
 1. Amala Nanda Ikhlasulkhaq <br>
