@@ -8,15 +8,14 @@ let data = [
 ]
 
 function mencetak(){
+  const cetak = document.getElementById('cetak')
 
-const cetak = document.getElementById('cetak')
+  cetak.innerHTML = ""
 
-cetak.innerHTML = ""
+  for (let i = 0;i < data.length;i++) {
+    let perMobil = data[i]
 
-for (let i = 0;i < data.length;i++) {
-  let perMobil = data[i]
-
-  let { brandname, name, cc, years, price, image } = perMobil
+    let { brandname, name, cc, years, price, image } = perMobil
 
   cetak.innerHTML += `
     <div class="card text-center mb-3">

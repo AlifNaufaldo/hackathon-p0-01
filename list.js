@@ -1,10 +1,10 @@
-let list = {
-    brandname: '',
-    name: '',
-    CC: '',
-    years: '',
-    price: 0,
-}
+// let list = {
+//     brandname: '',
+//     name: '',
+//     cc: '',
+//     years: '',
+//     price: 0,
+// }
 
 let brandname = ['Toyota', 'Honda', 'Daihatsu', 'Nissan', 'Mitsubishi', 'Hino']
 let name = ['Avanza', 'Brio', 'Xenia', 'Skyline', 'L300', 'Hino 700']
@@ -19,40 +19,41 @@ let data = [
     {"brandname": "Nissan", "name": "Skyline", "cc": 2600, "years": 2021, "price": 34531, "image": "https://www.nissanusa.com/content/dam/Nissan/us/experience_nissan/newsevents/skyline-to-gt-r/2024-nissan-gtr-special-edition.jpg.ximg.l_6_h.smart.jpg", "id": 4},
     {"brandname": "Mitsubishi", "name": "L300", "cc": 2268, "years": 2019, "price": 423234, "image": "https://www.sunstarmotor.id/wp-content/uploads/2020/05/l300-web-catalogue-458x420.jpg", "id": 5},
     {"brandname": "Hino", "name": "Hino 700", "cc": 12913, "years": 2024, "price": 13467, "image": "https://hino.co.id/assets/uploads/categories_child/unit_home-2023-03.png", "id": 6},
-    
 ]
 
-
+let defaultImage = "https://www.freeiconspng.com/uploads/transport-car-icon--6.png"
 
 // TAMBAH DATA MOBIL
 function createDataBaru(){
 
     let brandName = document.getElementById('brandname').value;
     let model = document.getElementById('name').value;
-    let CC = document.getElementById('CC').value;
+    let cc = document.getElementById('cc').value;
     let years = document.getElementById('years').value;
     let price = document.getElementById('price').value;
+    let image = document.getElementById('image').value;
+
+    if (!brandName || !model || !cc || !years || !price) {
+        alert(`DATA HARUS DIISI! NIAT JUALAN GAK SIH?`);
+        return;
+    }
 
     if (brandName && model && cc && years && price){
-        let idData = data.length === 0 ? 1 : data[data.length - 1] + 1;
-
+        let idData = data.length === 0 ? 1 : data[data.length - 1] + 1;      
+        
         let dataBaru = {
-            brandname: brandname,
+            brandname: brandName,
             name: model,
-            CC: CC,
+            cc: cc,
             years: years,
             price: price,
+            image: image ? image : defaultImage,
             id: idData
         }
-
-        data.push(dataBaru);
-        // mencetak(dataBaru)
         
-        // console.log(data);
-        // render(data);
-    } else {
-        alert(`DATA HARUS DIISI! NIAT JUALAN GAK SIH?`);
-    }
+        data.push(dataBaru);
+        mencetak();
+    } 
 }
 
 // SORT BERDASAR ABJAD
@@ -81,7 +82,7 @@ function filterhargaterendah(){
 
     data.sort((a, b) => a.price - b.price)
 
-    render(data)
+    mencetak(data)
 }
 
 // console.log(filterhargaterendah())
@@ -95,28 +96,11 @@ function filterhargatertinggi(){
 
 // console.log(filterhargatertinggi());
 
-function deleteById(dataArray, idToDelete) {
-    let indexToDelete = -1;
+function deleteItem(button) {
+    const card = button.closest('.card');
+    card.remove();
+}
   
-    for (let i = 0; i < dataArray.length; i++) {
-      if (dataArray[i].id === idToDelete) {
-        indexToDelete = i;
-        break;
-      }
-    }
-    let resultDelete = document.getElementById("result");
-  
-    //kondisi hapus data dan data tidak ada
-    if (indexToDelete !== -1) {
-      dataArray.splice(indexToDelete, 1); // Hapus data
-      resultDelete.innerHTML =
-        "Data dengan ID " + idToDelete + " telah dihapus.";
-    } else {
-      resultDelete.innerHTML =
-        "Data dengan ID " + idToDelete + " tidak ditemukan.";
-    }
-    mencetak(dataArray); // Perbarui tabel setelah penghapusan
-  }
 
 function mencetak(){
 
@@ -131,14 +115,14 @@ function mencetak(){
     
       cetak.innerHTML += `
         <div class="card text-center mb-3">
-          <img class="card-img-top" src="${image}" alt="${brandname}" style="width: 100%; height: auto; object-fit: contain; max-height: 100%;/>
+          <img class="card-img-top" id="image" src="${image}" alt="${brandname}" style="width: 100%; height: auto; object-fit: contain; max-height: 100%;/>
           <div class="card-body">
           <div>
             <h5 class="card-title">${brandname}</h5>
             <p class="card-text">${name} ${years} ${cc / 1000}L </p>
             <p class="card-text">Rp${price}
             <a href="#" class="btn btn-primary">Beli Bang</a>
-            <a href="#" class="btn btn-secondary" on-click="deleteById()">Hapus</a>
+            <a href="#" class="btn btn-secondary" onclick="deleteItem(this)">Hapus</a>
             </div>
           </div>
         </div>
