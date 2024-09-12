@@ -45,11 +45,6 @@ function editText(text) {
   return result;
 }
 
-function deleteItem(params) {
- 
-}
-
-
 function editedCar(carId) {
  const brandText = document.getElementById(carId + "Brand").textContent;
  const typeText = document.getElementById(carId + "Type").textContent;
@@ -90,8 +85,4 @@ function saveEdit() {
 
 function cancelEdit() {
  document.getElementById("editForm").style.display = "none";
-}
-
-function deleteItem(params) {
- 
 }
