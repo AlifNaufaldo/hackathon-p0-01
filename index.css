@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -48,12 +53,12 @@ body {
   display: inline-block;
 }
 
-footer {
+/* footer {
   background-color: #333;
   color: white;
   padding: 20px 0;
   text-align: center;
-}
+} */
 
 form {
   margin-bottom: 20px;
@@ -98,10 +103,29 @@ h2 {
 
 @media (max-width: 767.98px) {
   .card {
-    width: 100%; 
+    width: 100%;
   }
 }
 
 .btn-primary {
   width: 100%;
+}
+footer {
+  /* background-color: #333; */
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+span, p {
+  font-size: medium;
+}
+
+.text-center {
+  margin-top: 10px;
 }
