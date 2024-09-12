@@ -7,6 +7,8 @@ let data = [
   { "brandname": "Hino", "name": "Hino 700", "cc": 12913, "years": 2024, "price": 13467, "image": "https://hino.co.id/assets/uploads/categories_child/unit_home-2023-03.png" },
 ]
 
+function mencetak(){
+
 const cetak = document.getElementById('cetak')
 
 cetak.innerHTML = ""
@@ -25,9 +27,10 @@ for (let i = 0;i < data.length;i++) {
         <p class="card-text">${name} ${years} ${cc / 1000}L </p>
         <p class="card-text">Rp${price}
         <a href="#" class="btn btn-primary">Beli Bang</a>
-        <a href="#" class="btn btn-secondary">Detail</a>
+        <a href="#" class="btn btn-secondary" on click>Detail</a>
         </div>
       </div>
     </div>
   `
+}
 }
