@@ -10,11 +10,49 @@ body {
   }
 
   .container {
-    max-width: 800px;
-    margin: auto;
+    max-width: 1100px;
+    margin: 7px;
     background: #fff;
-    padding: 20px;
+    padding: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .container1{
+    
+    width: 45%;
+    height:30%;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    margin-right: 7px;
+    margin-bottom: 15px;
+    float: left;
+    padding: 12px;
+  }
+
+  #editbuttonbeneran{
+    
+    background-color: rgb(13, 14, 14);
+    color: white;
+    text-align: center;
+    padding: 5px;
+    
+  }
+
+  
+
+  #editbutton{
+    
+    color: rgb(243, 240, 240);
+    background-color: rgb(13, 14, 14);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h2 {
+    text-align: left;
   }
 
   h1 {
@@ -201,4 +239,9 @@ body {
    .price {
     color: green;
     font-weight: bold;
+   }
+
+   #editForm {
+    display: flex;
+    justify-content: center;
    }

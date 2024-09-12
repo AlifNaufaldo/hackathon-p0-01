@@ -4,55 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cars Edit</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <h1>Car List:</h1>
 
     <!-- Car List -->
-    <div class="car-list">
+    <div>
         <!-- Car 1 -->
-        <div class="car-card" id="car1">
-            <p id="car1Brand">Brand Name: Toyota</p>
-            <p id="car1Type">Type: Avanza</p>
-            <p id="car1Capacity">Engine Capacity: 1300cc</p>
-            <p id="car1Year">Years: 2010</p>
-            <p id="car1Price">Price: Rp. 1000</p>
-            <button onclick="editCar(1)">Edit</button>
+        <div class="container1" id="car1">
+            <p id="car1Brand">Brand Name: </p>
+            <p id="car1Type">Type: </p>
+            <p id="car1Capacity">cc: </p>
+            <p id="car1Year">Years: </p>
+            <p id="car1Price">Price: Rp. </p>
+          </div>
+
+          <div class="container1" id="editForm" style="display:none;">
+            <h2 >Edit Mobil</h2>
+            <label for="editBrand">Brand Name:</label>
+            <input type="text" id="editBrand" placeholder="Brand Name" required><br>
+    
+            <label for="editType">Type:</label>
+            <input type="text" id="editType" placeholder="Type Car" required><br>
+    
+            <label for="editCapacity">Engine Capacity:</label>
+            <input type="number" id="editCapacity" placeholder="cc" required><br>
+    
+            <label for="editYear">Years:</label>
+            <input type="number" id="editYear" placeholder="assembly Years" required><br>
+    
+            <label for="editPrice">Price:</label>
+            <input type="number" id="editPrice" placeholder="(IDR)" required><br>
+    
+            <button id = "editbutton" onclick="saveEdit()">Save</button>
+            <button id = "editbutton" onclick="cancelEdit()">Cancel</button>
         </div>
         
+       
+
         <!-- Car 2 -->
-        <div class="car-card" id="car2">
-            <p id="car2Brand">Brand Name: Honda</p>
-            <p id="car2Type">Type: Brio</p>
-            <p id="car2Capacity">Engine Capacity: 1200cc</p>
-            <p id="car2Year">Years: 2016</p>
-            <p id="car2Price">Price: Rp. 5000</p>
-            <button onclick="editCar(2)">Edit</button>
-        </div>
+        <!-- <div class="container1" id="car2">
+            <p id="car2Brand">Brand Name: </p>
+            <p id="car2Type">Type: </p>
+            <p id="car2Capacity">cc: </p>
+            <p id="car2Year">Years: </p>
+            <p id="car2Price">Price: Rp. </p>
+            <button  class = "recommended-btn" onclick="editCar(2)">Edit</button>
+        </div> -->
     </div>
+
+    <button  id = "editbuttonbeneran" onclick="editCar(1)">Edit</button>
 
     <!-- Form Edit Car -->
-    <div id="editForm" style="display:none;">
-        <h2>Edit Mobil</h2>
-        <label for="editBrand">Brand Name:</label>
-        <input type="text" id="editBrand" placeholder="Brand Name" required><br>
-
-        <label for="editType">Type:</label>
-        <input type="text" id="editType" placeholder="Type Car" required><br>
-
-        <label for="editCapacity">Engine Capacity:</label>
-        <input type="number" id="editCapacity" placeholder="cc" required><br>
-
-        <label for="editYear">Years:</label>
-        <input type="number" id="editYear" placeholder="assembly Years" required><br>
-
-        <label for="editPrice">Price:</label>
-        <input type="number" id="editPrice" placeholder="(IDR)" required><br>
-
-        <button onclick="saveEdit()">Save</button>
-        <button onclick="cancelEdit()">Cancel</button>
-    </div>
+   
 
     <script src="update.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
