@@ -1,0 +1,55 @@
+<!-- 
+ 1. ambil data list mobil yang tersedia pada profile
+ 2. klik tombol edit
+ 3. user diarahkan ke form edit
+ 4. isi form edit dengan format yang telah tersedia
+ 5. klik save untuk menyimpan, klik cancel untuk membatalkan perubahan
+ 6. klik tombol delete untuk menghapus card list mobil 
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit/Delete Car</title>
+</head>
+<body>
+    <h1>Car List</h1>
+    <div class="car-list">
+     <!-- List Mobil -->
+     <div class="car-card" id="">
+        <p id="carBrand">Brand Name: </p>
+        <p id="carType">Type: </p>
+        <p id="carCapacity">Engine Capacity: cc</p>
+        <p id="carYear">Years: </p>
+        <p id="carPrice">Price: Rp. </p>
+      <!-- Edit Button -->
+      <button onclick="editCar('')">Edit</button>
+      <!-- Delete Button -->
+      <button onclick="deleteCar('')">delete</button>
+    </div>
+    <!-- Edit Form -->
+    <div id="editForm" style="display:none;">
+     <h2>Edit Car</h2>
+     <label for="editBrand">Brand name:</label>
+     <input type="text" id="editBrand" required><br>
+
+     <label for="editType">Type:</label>
+     <input type="text" id="editType" required><br>
+
+     <label for="editCapacity">Engine Capacity:</label>
+     <input type="text" id="editCapacity" required><br>
+
+     <label for="editYear">Years:</label>
+     <input type="number" id="editYear" required><br>
+
+     <label for="editPrice">Price:</label>
+     <input type="number" id="editPrice" required><br>
+
+     <button onclick="saveEdit()">Save</button>
+     <button onclick="cancelEdit()">Cancel</button>
+ </div>
+
+ <script src="update.js"></script>
+</body>
+</html>

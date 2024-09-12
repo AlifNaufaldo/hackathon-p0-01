@@ -1,85 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobelin - E-Commerce Mobil Bekas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>Mobelin</h1>
-        </div>
-        <div class="user-menu">
-            <span class="user-icon">👤</span>
-            <span class="user-text">Users</span>
-        </div>
-    </header>
-
-    <section class="top-section">
-        <div class="top-list">
-            <h2>Top List !</h2>
-            <div class="car-icon">
-                <img src="car-icon.png" alt="Car Icon" />
-            </div>
-            <button class="recommended-btn">Click Here for any recommended</button>
-        </div>
-    </section>
-
-    <section class="filter-section">
-        <div class="filter-options">
-            <select>
-                <option value="brand">Brand</option>
-                <option value="brand">Mitshubishi</option>
-                <option value="brand">Toyota</option>
-                <option value="brand">KIA</option>
-            </select>
-            <select>
-                <option value="price">Price</option>
-            </select>
-            <select>
-                <option value="az">A - Z</option>
-            </select>
-        </div>
-    </section>
-
-    <section class="list-section">
-        <h3>List :</h3>
-        <div class="car-list">
-            <div class="car-card">
-                <div class="car-img">🚗</div>
-                <div class="car-info">
-                    <p>brand, type</p>
-                    <p class="price">Price: </p>
-                </div>
-            </div>
-            <div class="car-card">
-                <div class="car-img">🚗</div>
-                <div class="car-info">
-                    <p>brand, type</p>
-                    <p class="price">Price: </p>
-                </div>
-            </div>
-            <div class="car-card">
-                <div class="car-img">🚗</div>
-                <div class="car-info">
-                    <p>brand, type</p>
-                    <p class="price">Price: </p>
-                </div>
-            </div>
-            <div class="car-card">
-                <div class="car-img">🚗</div>
-                <div class="car-info">
-                    <p>brand, type</p>
-                    <p class="price">Price: </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Hackaton8 Batch 054 Tim 2</p>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">FUFUFAFA</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search"
+        />
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Search
+        </button>
+      </form>
+    </nav>
+    <div id="cetak" class="d-flex flex-wrap"></div>
+    <script src="app.js"></script>
+    <footer class="py-3 my-4">
+      <p class="text-center text-muted">© 2022 Company, Inc</p>
     </footer>
-</body>
+  </body>
 </html>
