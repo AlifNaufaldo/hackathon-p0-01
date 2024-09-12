@@ -8,6 +8,8 @@ let data = [
 ]
 
 function mencetak(){
+
+function mencetak(){
   const cetak = document.getElementById('cetak')
 
   cetak.innerHTML = ""
@@ -17,19 +19,19 @@ function mencetak(){
 
     let { brandname, name, cc, years, price, image } = perMobil
 
-    cetak.innerHTML += `
-      <div class="card text-center mb-3">
-        <img class="card-img-top" src="${image}" alt="${brandname}" style="width: 100%; height: auto; object-fit: contain; max-height: 100%;/>
-        <div class="card-body">
-        <div>
-          <h5 class="card-title">${brandname}</h5>
-          <p class="card-text">${name} ${years} ${cc / 1000}L </p>
-          <p class="card-text">Rp${price}
-          <a href="#" class="btn btn-primary">Beli Bang</a>
-          <a href="#" class="btn btn-secondary">Detail</a>
-          </div>
+  cetak.innerHTML += `
+    <div class="card text-center mb-3">
+      <img class="card-img-top" src="${image}" alt="${brandname}" style="width: 100%; height: auto; object-fit: contain; max-height: 100%;/>
+      <div class="card-body">
+      <div>
+        <h5 class="card-title">${brandname}</h5>
+        <p class="card-text">${name} ${years} ${cc / 1000}L </p>
+        <p class="card-text">Rp${price}
+        <a href="#" class="btn btn-primary">Beli Bang</a>
+        <a href="#" class="btn btn-secondary" on click>Detail</a>
         </div>
       </div>
-    `
-  }
+    </div>
+  `
+}
 }
