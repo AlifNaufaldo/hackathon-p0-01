@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jual mobil</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
 <body>
   <h1>Tambah Data Mobil</h1>
 
-  <form id="formulir" onsubmit="createDataBaru()">
+  <div id="formulir">
     <div>
       <label>Nama Brand: </label>
       <input type="text" id="brandname" placeholder="Brand Name">
@@ -31,8 +36,10 @@
       <input type="text" id="price" placeholder="Harga Jual">
     </div>
     
-    <button type="submit">submit</button>
-  </form>
+    <button type="submit" onclick="createDataBaru()">submit</button>
+  </div>
+  <div id = "cetak"></div>
   <script src="list.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
