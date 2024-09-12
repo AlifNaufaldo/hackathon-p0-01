@@ -22,7 +22,7 @@ let data = [
     
 ]
 
-
+// TAMBAH DATA MOBIL
 function createDataBaru(){
 
     let brandName = document.getElementById('brandname').value;
@@ -51,9 +51,43 @@ function createDataBaru(){
     } else {
         alert(`DATA HARUS DIISI! NIAT JUALAN GAK SIH?`);
     }
+}
+
+// SORT BERDASAR ABJAD
+function urutkanAtoZ(){
+    for (let x = 0; x < data.length - 1; x++){
+        for (let y = x + 1; y < data.length; y++){
+            let mobilA = data[x].name.toLowerCase();
+            let mobilB = data[y].name.toLowerCase();
+
+            if (mobilA > mobilB){
+                let temp = data[x];
+                data[x] = data[y];
+                data[y] = temp;
+            }
+        }
+    }
+
+    //fungsi render
 
 }
 
-// function urutkanAbjad(){
-//     data.sort()
-// }
+function urutkanZtoA(){
+    for (let x = 0; x < data.length - 1; x++){
+        for (let y = x + 1; y < data.length; y++){
+            let mobilA = data[x].name.toLowerCase();
+            let mobilB = data[y].name.toLowerCase();
+
+            if (mobilA < mobilB){
+                let temp = data[x];
+                data[x] = data[y];
+                data[y] = temp;
+            }
+        }
+    }
+
+    //fungsi render
+
+}
+
+
