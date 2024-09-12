@@ -23,7 +23,6 @@ let data = [
 ]
 
 
-
 function createDataBaru(){
 
     let brandName = document.getElementById('brandname').value;
@@ -55,4 +54,6 @@ function createDataBaru(){
 
 }
 
-// createDataBaru({"brandname": "Hino", "name": "Hino 700", "cc": 12913, "years": 2024, "price": 13467})
+// function urutkanAbjad(){
+//     data.sort()
+// }
