@@ -9,6 +9,10 @@ body {
     max-width: 720px;
   }
 
+  .buatdelete {
+    box-sizing: 20px;
+  }
+
   .container {
     max-width: 800px;
     margin: auto;

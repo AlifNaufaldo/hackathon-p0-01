@@ -26,6 +26,7 @@
           <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
           <li class="nav-item"><a class="nav-link" href="create.html">Tambah Item</a></li>
+          <li class="nav-item"><a class="nav-link" href="update.html">Update Item</a></li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
           </li>
@@ -43,6 +44,7 @@
           Search
         </button>
 
+
         <div class="dropdown" role = "button">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Filter
@@ -59,8 +61,14 @@
 
 
     </div>
+  
     </nav>
     <div id="cetak" class="d-flex flex-wrap"></div>
+    <input id="dihapus"
+    class="buat delete"
+    type="number"
+    placeholder="id Mobil yang mau dihapus"
+  /> <button on click = "deleteData()">Hapus Data</button>
     <script src="list.js"></script>
     <footer class="py-3 my-4">
       <p class="text-center text-muted">© 2022 Company, Inc</p>
