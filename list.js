@@ -54,71 +54,18 @@ function createDataBaru(){
 
 // SORT BERDASAR ABJAD
 function urutkanNamaAtoZ(){
-    for (let x = 0; x < data.length - 1; x++){
-        for (let y = x + 1; y < data.length; y++){
-            let mobilA = data[x].name.toLowerCase();
-            let mobilB = data[y].name.toLowerCase();
-
-            if (mobilA > mobilB){
-                let temp = data[x];
-                data[x] = data[y];
-                data[y] = temp;
-            }
-        }
-    }
-
-    //fungsi render
+    return sortedName = data.sort((a, b) => a.name > b.name ? 1 : -1);
 }
 
 function urutkanNamaZtoA(){
-    for (let x = 0; x < data.length - 1; x++){
-        for (let y = x + 1; y < data.length; y++){
-            let mobilA = data[x].name.toLowerCase();
-            let mobilB = data[y].name.toLowerCase();
-
-            if (mobilA < mobilB){
-                let temp = data[x];
-                data[x] = data[y];
-                data[y] = temp;
-            }
-        }
-    }
-
-    //fungsi render
+    return sortedName = data.sort((a, b) => a.name < b.name ? 1 : -1);
 }
 
+// SORT BERDASAR BRAND
 function urutkanBrandAtoZ(){
-    for (let x = 0; x < data.length - 1; x++){
-        for (let y = x + 1; y < data.length; y++){
-            let mobilA = data[x].brandname.toLowerCase();
-            let mobilB = data[y].brandname.toLowerCase();
-
-            if (mobilA > mobilB){
-                let temp = data[x];
-                data[x] = data[y];
-                data[y] = temp;
-            }
-        }
-    }
-
-    //fungsi render
+    return sortedBrand = data.sort((a, b) => a.brandname > b.brandname ? 1 : -1);
 }
 
 function urutkanBrandZtoA(){
-    for (let x = 0; x < data.length - 1; x++){
-        for (let y = x + 1; y < data.length; y++){
-            let mobilA = data[x].brandname.toLowerCase();
-            let mobilB = data[y].brandname.toLowerCase();
-
-            if (mobilA < mobilB){
-                let temp = data[x];
-                data[x] = data[y];
-                data[y] = temp;
-            }
-        }
-    }
-
-    //fungsi render
+    return sortedBrand = data.sort((a, b) => a.brandname < b.brandname ? 1 : -1);
 }
-
-
