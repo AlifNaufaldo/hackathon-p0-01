@@ -8,8 +8,6 @@ let data = [
 ]
 
 function mencetak(){
-
-function mencetak(){
   const cetak = document.getElementById('cetak')
 
   cetak.innerHTML = ""

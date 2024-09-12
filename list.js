@@ -1,7 +1,7 @@
 let list = {
     brandname: '',
     name: '',
-    CC: '',
+    cc: '',
     years: '',
     price: 0,
 }
@@ -29,30 +29,30 @@ function createDataBaru(){
 
     let brandName = document.getElementById('brandname').value;
     let model = document.getElementById('name').value;
-    let CC = document.getElementById('CC').value;
+    let cc = document.getElementById('cc').value;
     let years = document.getElementById('years').value;
     let price = document.getElementById('price').value;
 
-    if (brandName && model && cc && years && price){
-        let idData = data.length === 0 ? 1 : data[data.length - 1] + 1;
+    if (!brandName || !model || !cc || !years || !price) {
+        alert(`DATA HARUS DIISI! NIAT JUALAN GAK SIH?`);
+        return;
+    }
 
+    if (brandName && model && cc && years && price){
+        let idData = data.length === 0 ? 1 : data[data.length - 1] + 1;      
+        
         let dataBaru = {
-            brandname: brandname,
+            brandname: brandName,
             name: model,
-            CC: CC,
+            cc: cc,
             years: years,
             price: price,
             id: idData
         }
-
-        data.push(dataBaru);
-        // mencetak(dataBaru)
         
-        // console.log(data);
-        // render(data);
-    } else {
-        alert(`DATA HARUS DIISI! NIAT JUALAN GAK SIH?`);
-    }
+        data.push(dataBaru);
+        mencetak();
+    } 
 }
 
 // SORT BERDASAR ABJAD
@@ -81,7 +81,7 @@ function filterhargaterendah(){
 
     data.sort((a, b) => a.price - b.price)
 
-    render(data)
+    mencetak(data)
 }
 
 // console.log(filterhargaterendah())
