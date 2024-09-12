@@ -45,64 +45,84 @@
   </nav>
   <!-- CREATE NEW DATA -->
   <div class="container mt-4">
-    <h1>Tambah Data Mobil</h1>
-    <div id="formulir">
-      <div class="form-group">
-        <label for="brandname">Nama Brand: </label>
-        <input
-          type="text"
-          class="form-control"
-          id="brandname"
-          placeholder="Brand Name"
-        />
+    <div class="row">
+      <!-- Form Section -->
+      <div class="col-md-4">
+        <h1>Tambah Data Mobil</h1>
+        <div id="formulir">
+          <div class="form-group">
+            <label for="brandname">Nama Brand: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="brandname"
+              placeholder="Brand Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Nama Mobil: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Model"
+            />
+          </div>
+          <div class="form-group">
+            <label for="cc">CC Mobil: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="cc"
+              placeholder="Jumlah CC Mobil"
+            />
+          </div>
+          <div class="form-group">
+            <label for="years">Tahun Mobil: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="years"
+              placeholder="Tahun Keluaran Mobil"
+            />
+          </div>
+          <div class="form-group">
+            <label for="price">Harga Jual: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="price"
+              placeholder="Harga Jual"
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-primary mt-3"
+            onclick="createDataBaru()"
+          >
+            Submit
+          </button>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="name">Nama Mobil: </label>
-        <input
-          type="text"
-          class="form-control"
-          id="name"
-          placeholder="Model"
-        />
-      </div>
-      <div class="form-group">
-        <label for="cc">CC Mobil: </label>
-        <input
-          type="text"
-          class="form-control"
-          id="cc"
-          placeholder="Jumlah CC Mobil"
-        />
-      </div>
-      <div class="form-group">
-        <label for="years">Tahun Mobil: </label>
-        <input
-          type="text"
-          class="form-control"
-          id="years"
-          placeholder="Tahun Keluaran Mobil"
-        />
-      </div>
-      <div class="form-group">
-        <label for="price">Harga Jual: </label>
-        <input
-          type="text"
-          class="form-control"
-          id="price"
-          placeholder="Harga Jual"
-        />
-      </div>
-      <button
-        type="button"
-        class="btn btn-primary mt-3"
-        onclick="createDataBaru()"
-      >
-        Submit
-      </button>
-    </div>
 
-    <!-- Display Section -->
-    <div id="cetak" class="d-flex flex-wrap mt-4"></div>
+      <!-- Display Section -->
+      <div class="col-md-8">
+        <div class="dropdown mb-3" role="button">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+            Filter
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" onclick="filterhargatertinggi()">Harga Tertinggi</a></li>
+            <li><a class="dropdown-item" href="#" onclick="filterhargaterendah()">Harga Terendah</a></li>
+            <li><a class="dropdown-item" href="#" onclick="urutkanNamaAtoZ()">Nama Mobil A-Z</a></li>
+            <li><a class="dropdown-item" href="#" onclick="urutkanNamaZtoA()">Nama Mobil Z-A</a></li>
+            <li><a class="dropdown-item" href="#" onclick="urutkanBrandAtoZ()">Nama Brand A-Z</a></li>
+            <li><a class="dropdown-item" href="#" onclick="urutkanBrandZtoA()">Nama Brand Z-A</a></li>
+          </ul>
+        </div>
+        <div id="cetak" class="d-flex flex-wrap"></div>
+      </div>
+    </div>
   </div>
 
   <script src="list.js"></script>
