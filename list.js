@@ -54,18 +54,23 @@ function createDataBaru(){
 
 // SORT BERDASAR ABJAD
 function urutkanNamaAtoZ(){
-    return sortedName = data.sort((a, b) => a.name > b.name ? 1 : -1);
+    sortedName = data.sort((a, b) => a.name > b.name ? 1 : -1);
+    mencetak(sortedName);
 }
 
 function urutkanNamaZtoA(){
-    return sortedName = data.sort((a, b) => a.name < b.name ? 1 : -1);
+    sortedName = data.sort((a, b) => a.name < b.name ? 1 : -1);
+    mencetak(sortedName);
 }
 
 // SORT BERDASAR BRAND
 function urutkanBrandAtoZ(){
-    return sortedBrand = data.sort((a, b) => a.brandname > b.brandname ? 1 : -1);
+    sortedBrand = data.sort((a, b) => a.brandname > b.brandname ? 1 : -1);
+    mencetak(sortedBrand);
 }
 
 function urutkanBrandZtoA(){
-    return sortedBrand = data.sort((a, b) => a.brandname < b.brandname ? 1 : -1);
+    sortedBrand = data.sort((a, b) => a.brandname < b.brandname ? 1 : -1);
+    mencetak(sortedBrand);
 }
+

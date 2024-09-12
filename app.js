@@ -7,27 +7,29 @@ let data = [
   { "brandname": "Hino", "name": "Hino 700", "cc": 12913, "years": 2024, "price": 13467, "image": "https://hino.co.id/assets/uploads/categories_child/unit_home-2023-03.png" },
 ]
 
-const cetak = document.getElementById('cetak')
+function mencetak(){
+  const cetak = document.getElementById('cetak')
 
-cetak.innerHTML = ""
+  cetak.innerHTML = ""
 
-for (let i = 0;i < data.length;i++) {
-  let perMobil = data[i]
+  for (let i = 0;i < data.length;i++) {
+    let perMobil = data[i]
 
-  let { brandname, name, cc, years, price, image } = perMobil
+    let { brandname, name, cc, years, price, image } = perMobil
 
-  cetak.innerHTML += `
-    <div class="card text-center mb-3">
-      <img class="card-img-top" src="${image}" alt="${brandname}" style="width: 100%; height: auto; object-fit: contain; max-height: 100%;/>
-      <div class="card-body">
-      <div>
-        <h5 class="card-title">${brandname}</h5>
-        <p class="card-text">${name} ${years} ${cc / 1000}L </p>
-        <p class="card-text">Rp${price}
-        <a href="#" class="btn btn-primary">Beli Bang</a>
-        <a href="#" class="btn btn-secondary">Detail</a>
+    cetak.innerHTML += `
+      <div class="card text-center mb-3">
+        <img class="card-img-top" src="${image}" alt="${brandname}" style="width: 100%; height: auto; object-fit: contain; max-height: 100%;/>
+        <div class="card-body">
+        <div>
+          <h5 class="card-title">${brandname}</h5>
+          <p class="card-text">${name} ${years} ${cc / 1000}L </p>
+          <p class="card-text">Rp${price}
+          <a href="#" class="btn btn-primary">Beli Bang</a>
+          <a href="#" class="btn btn-secondary">Detail</a>
+          </div>
         </div>
       </div>
-    </div>
-  `
+    `
+  }
 }
