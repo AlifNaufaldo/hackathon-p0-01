@@ -71,16 +71,12 @@ function urutkanBrandZtoA() {
 }
 
 function filterhargaterendah() {
-
     data.sort((a, b) => a.price - b.price)
-
     mencetak(data)
 }
 
 function filterhargatertinggi() {
-
     data.sort((a, b) => b.price - a.price)
-
     mencetak(data)
 }
 
@@ -116,6 +112,6 @@ function mencetak() {
         </div>
       `
     }
-    }
-    console.log(mencetak());
+}
+mencetak();
     
