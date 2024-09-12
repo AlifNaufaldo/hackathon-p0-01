@@ -7,8 +7,8 @@
   <title>Tambah Data Mobil</title>
 </head>
 <body>
+  <!-- CREATE NEW DATA -->
   <h1>Tambah Data Mobil</h1>
-
   <div id="formulir">
     <div>
       <label>Nama Brand: </label>
@@ -34,9 +34,13 @@
     <button type="submit" onclick="createDataBaru()">Submit</button>
   </div>
 
-  <!-- button untuk sort abjad -->
-    <button onclick="urutkanAtoZ()">Urutkan A - Z</button>
-    <button onclick="urutkanZtoA()">Urutkan Z - A</button>
+  <!-- button untuk sort nama abjad -->
+    <button onclick="urutkanNamaAtoZ()">Model A - Z</button>
+    <button onclick="urutkanNamaZtoA()">Model Z - A</button>
+ 
+    <!-- button untuk sort brand abjad -->
+    <button onclick="urutkanNamaAtoZ()">Brand A - Z</button>
+    <button onclick="urutkanNamaZtoA()">Brand Z - A</button>
 
 
   <script src="list.js"></script>
