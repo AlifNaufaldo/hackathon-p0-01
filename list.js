@@ -1,10 +1,10 @@
-let list = {
-    brandname: '',
-    name: '',
-    cc: '',
-    years: '',
-    price: 0,
-}
+// let list = {
+//     brandname: '',
+//     name: '',
+//     cc: '',
+//     years: '',
+//     price: 0,
+// }
 
 let brandname = ['Toyota', 'Honda', 'Daihatsu', 'Nissan', 'Mitsubishi', 'Hino']
 let name = ['Avanza', 'Brio', 'Xenia', 'Skyline', 'L300', 'Hino 700']
@@ -19,10 +19,9 @@ let data = [
     {"brandname": "Nissan", "name": "Skyline", "cc": 2600, "years": 2021, "price": 34531, "image": "https://www.nissanusa.com/content/dam/Nissan/us/experience_nissan/newsevents/skyline-to-gt-r/2024-nissan-gtr-special-edition.jpg.ximg.l_6_h.smart.jpg", "id": 4},
     {"brandname": "Mitsubishi", "name": "L300", "cc": 2268, "years": 2019, "price": 423234, "image": "https://www.sunstarmotor.id/wp-content/uploads/2020/05/l300-web-catalogue-458x420.jpg", "id": 5},
     {"brandname": "Hino", "name": "Hino 700", "cc": 12913, "years": 2024, "price": 13467, "image": "https://hino.co.id/assets/uploads/categories_child/unit_home-2023-03.png", "id": 6},
-    
 ]
 
-
+let defaultImage = "https://www.freeiconspng.com/uploads/transport-car-icon--6.png"
 
 // TAMBAH DATA MOBIL
 function createDataBaru(){
@@ -32,6 +31,7 @@ function createDataBaru(){
     let cc = document.getElementById('cc').value;
     let years = document.getElementById('years').value;
     let price = document.getElementById('price').value;
+    let image = document.getElementById('image').value;
 
     if (!brandName || !model || !cc || !years || !price) {
         alert(`DATA HARUS DIISI! NIAT JUALAN GAK SIH?`);
@@ -47,6 +47,7 @@ function createDataBaru(){
             cc: cc,
             years: years,
             price: price,
+            image: image ? image : defaultImage,
             id: idData
         }
         
@@ -131,7 +132,7 @@ function mencetak(){
     
       cetak.innerHTML += `
         <div class="card text-center mb-3">
-          <img class="card-img-top" src="${image}" alt="${brandname}" style="width: 100%; height: auto; object-fit: contain; max-height: 100%;/>
+          <img class="card-img-top" id="image" src="${image}" alt="${brandname}" style="width: 100%; height: auto; object-fit: contain; max-height: 100%;/>
           <div class="card-body">
           <div>
             <h5 class="card-title">${brandname}</h5>

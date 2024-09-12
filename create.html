@@ -12,34 +12,99 @@
     <title>Document</title>
   </head>
 <body>
+  <!-- navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">FUFUFAFA</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="create.html">Tambah Item</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <!-- CREATE NEW DATA -->
-  <h1>Tambah Data Mobil</h1>
+  <div class="container mt-4">
+    <h1>Tambah Data Mobil</h1>
+    <div id="formulir">
+      <div class="form-group">
+        <label for="brandname">Nama Brand: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="brandname"
+          placeholder="Brand Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Nama Mobil: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Model"
+        />
+      </div>
+      <div class="form-group">
+        <label for="cc">CC Mobil: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="cc"
+          placeholder="Jumlah CC Mobil"
+        />
+      </div>
+      <div class="form-group">
+        <label for="years">Tahun Mobil: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="years"
+          placeholder="Tahun Keluaran Mobil"
+        />
+      </div>
+      <div class="form-group">
+        <label for="price">Harga Jual: </label>
+        <input
+          type="text"
+          class="form-control"
+          id="price"
+          placeholder="Harga Jual"
+        />
+      </div>
+      <button
+        type="button"
+        class="btn btn-primary mt-3"
+        onclick="createDataBaru()"
+      >
+        Submit
+      </button>
+    </div>
 
-  <div id="formulir">
-    <div>
-      <label>Nama Brand: </label>
-      <input type="text" id="brandname" placeholder="Brand Name">
-    </div>
-    <div>
-      <label>Nama Mobil: </label>
-      <input type="text" id="name" placeholder="Model">
-    </div>
-    <div>
-      <label>CC Mobil: </label>
-      <input type="text" id="cc" placeholder="Jumlah CC Mobil">
-    </div>
-    <div>
-      <label>Tahun Mobil: </label>
-      <input type="text" id="years" placeholder="Tahun Keluaran Mobil">
-    </div>
-    <div>
-      <label>Harga Jual: </label>
-      <input type="text" id="price" placeholder="Harga Jual">
-    </div>
-    
-    <button type="submit" onclick="createDataBaru()">submit</button>
+    <!-- Display Section -->
+    <div id="cetak" class="d-flex flex-wrap mt-4"></div>
   </div>
-  <div id = "cetak" class="d-flex flex-wrap"></div>
+
   <script src="list.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
