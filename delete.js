@@ -14,10 +14,6 @@ let data = [
 // syntax || array.findIndex(function(currentValue, index, arr), thisValue)
 // findIndex: mencari elemen dalam array yang memenuhi kriteria tertentu dan mengembalikan indeks dari elemen tersebut.
 
-//
-
-
-
 function deleteById(dataArray, hapusID) {
     // console.log(data)
     let indexDiHapus = -1;
