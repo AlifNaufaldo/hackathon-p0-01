@@ -1,16 +1,16 @@
 ## Website Mobil Bekas
 
-## CRUD
+### CRUD
 Create Data Mobil <br>
 Read Data Mobil <br>
 Update Data Mobil  <br>
 Delete Data Mobil <br>
 
-## Fitur Tambahan
+### Fitur Tambahan
 Filter by Harga <br>
 Filter by Nama <br>
 
-## Kelompok 2 (team panitia)
+### Kelompok 2 ~~(team panitia)~~
 1. Amala Nanda Ikhlasulkhaq <br>
 2. Muhammad Alif Naufaldo <br>
 3. Prima Widiani <br>
