@@ -97,8 +97,15 @@ function filterhargatertinggi(){
 // console.log(filterhargatertinggi());
 
 function deleteItem(button) {
-    const card = button.closest('.card');
-    card.remove();
+    let parentElement = button.parentElement;
+  
+    while (parentElement && !parentElement.classList.contains('card')) {
+      parentElement = parentElement.parentElement;
+    }
+  
+    if (parentElement) {
+      parentElement.parentNode.removeChild(parentElement);
+    }
 }
   
 
