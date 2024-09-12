@@ -10,7 +10,7 @@ Delete Data Mobil <br>
 Filter by Harga <br>
 Filter by Nama <br>
 
-### Kelompok 2 ~~(team panitia)~~
+### Team 2 ~~(team panitia)~~
 1. Amala Nanda Ikhlasulkhaq <br>
 2. Muhammad Alif Naufaldo <br>
 3. Prima Widiani <br>
