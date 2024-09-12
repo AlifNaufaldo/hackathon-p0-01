@@ -1,88 +1,64 @@
-/*
-update data penjualan mobil dari yang sudah ada
-update data mobil
-delete mobil jika sudah terjual atau tidak ingin dijual
+let currentCarId = null;
 
-*/
+let data = [
+    {"brandname": "Toyota", "name": "Avanza", "cc": 1300, "years": 2010, "price": 1000, "id": 1},
+    {"brandname": "Honda", "name": "Brio", "cc": 1200, "years": 2016, "price": 5000, "id": 2},
+    {"brandname": "Daihatsu", "name": "Xenia", "cc": 1000, "years": 2022, "price": 13455, "id": 3},
+    {"brandname": "Nissan", "name": "Skyline", "cc": 2600, "years": 2021, "price": 34531, "id": 4},
+    {"brandname": "Mitsubishi", "name": "L300", "cc": 2268, "years": 2019, "price": 423234, "id": 5},
+    {"brandname": "Hino", "name": "Hino 700", "cc": 12913, "years": 2024, "price": 13467, "id": 6},
+];
 
-function cariId(params) {
- 
-}
+function editCar(carId) {
+    currentCarId = carId;
 
-function editCars(text, edit) {
-  let result = "";
-  let part = false;
-  let editLength = edit.length;
-  let editIndex = 0;
-
-  for (let x = 0; x < text.length; x++) {
-    if (!part) {
-      if (text[x] === edit[editIndex]) {
-        editIndex++;
-
-        if (editIndex === editLength) {
-          part = true;
+    let selectedCar = null;
+    for (let x = 0; x < data.length; x++) {
+        if (data[x].id === carId) {
+            selectedCar = data[x];
+            break;
         }
-      } else {
-        break;
-      }
+    }
+
+    if (selectedCar !== null) {
+        document.getElementById("editBrand").value = selectedCar.brandname;
+        document.getElementById("editType").value = selectedCar.name;
+        document.getElementById("editCapacity").value = selectedCar.cc;
+        document.getElementById("editYear").value = selectedCar.years;
+        document.getElementById("editPrice").value = selectedCar.price;
+        document.getElementById("editForm").style.display = "block";
     } else {
-      result += text[x];
+        console.log("Mobil dengan ID " + carId + " tidak ditemukan.");
     }
-  }
-
-  return result;
-}
-
-function editText(text) {
-  let result = "";
-
-  for (let x = 0; x < text.length; x++) {
-    if (text[x] === "") {
-      result += text[x];
-    }
-  }
-  return result;
-}
-
-function editedCar(carId) {
- const brandText = document.getElementById(carId + "Brand").textContent;
- const typeText = document.getElementById(carId + "Type").textContent;
- const capacityText = document.getElementById(carId + "Capacity").textContent;
- const yearText = document.getElementById(carId + "Year").textContent;
- const priceText = document.getElementById(carId + "Price").textContent;
-
- const brand = editCars(brandText, "Brand Name: ");
- const type = editCars(typeText, "Type: ");
- const capacity = editCars(capacityText, "Engine Capacity: ");
- const year = editCars(yearText, "Years: ");
- const price = editText(editCars(priceText, "Price: Rp. "));
-
- document.getElementById("editBrand").value = brand;
- document.getElementById("editType").value = type;
- document.getElementById("editCapacity").value = capacity;
- document.getElementById("editYear").value = year;
- document.getElementById("editPrice").value = price;
-
- document.getElementById("editForm").style.display = "block";
 }
 
 function saveEdit() {
- const brand = document.getElementById("editBrand").value;
- const type = document.getElementById("editType").value;
- const capacity = document.getElementById("editCapacity").value;
- const year = document.getElementById("editYear").value;
- const price = document.getElementById("editPrice").value;
+    const brand = document.getElementById("editBrand").value;
+    const type = document.getElementById("editType").value;
+    const capacity = document.getElementById("editCapacity").value;
+    const year = document.getElementById("editYear").value;
+    const price = document.getElementById("editPrice").value;
 
- document.getElementById(currentCarId + "Brand").textContent = "Brand Name: " + brand;
- document.getElementById(currentCarId + "Type").textContent = "Type: " + type;
- document.getElementById(currentCarId + "Capacity").textContent = "Engine Capacity: " + capacity;
- document.getElementById(currentCarId + "Year").textContent = "Years: " + year;
- document.getElementById(currentCarId + "Price").textContent = "Price: Rp " + price;
+    for (let x = 0; x < data.length; x++) {
+        if (data[x].id === currentCarId) {
+            data[x].brandname = brand;
+            data[x].name = type;
+            data[x].cc = capacity;
+            data[x].years = year;
+            data[x].price = price;
+            break;
+        }
+    }
 
- document.getElementById("editForm").style.display = "none";
+    document.getElementById("car" + currentCarId + "Brand").textContent = "Brand Name: " + brand;
+    document.getElementById("car" + currentCarId + "Type").textContent = "Type: " + type;
+    document.getElementById("car" + currentCarId + "Capacity").textContent = "Engine Capacity: " + capacity + "cc";
+    document.getElementById("car" + currentCarId + "Year").textContent = "Years: " + year;
+    document.getElementById("car" + currentCarId + "Price").textContent = "Price: Rp. " + price;
+
+    document.getElementById("editForm").style.display = "none";
 }
 
 function cancelEdit() {
- document.getElementById("editForm").style.display = "none";
+    document.getElementById("editForm").style.display = "none";
 }
