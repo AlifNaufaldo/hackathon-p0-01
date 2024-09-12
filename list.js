@@ -11,7 +11,7 @@ let name = ['Avanza', 'Brio', 'Xenia', 'Skyline', 'L300', 'Hino 700']
 let cc = ['1300', '1200','1000', '2600', '2268', '12913']
 let years = ['2010', '2016', '2022', '2021', '2019', '2024']
 let price = [1000, 5000, 13455, 34531, 423234, 13467]
-
+//buat push
 let data = [
     {"brandname": "Toyota", "name": "Avanza", "cc": 1300, "years": 2010, "price": 1000},
     {"brandname": "Honda", "name": "Brio", "cc": 1200, "years": 2016, "price": 5000},
