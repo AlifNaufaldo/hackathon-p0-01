@@ -96,28 +96,11 @@ function filterhargatertinggi(){
 
 // console.log(filterhargatertinggi());
 
-function deleteById(dataArray, idToDelete) {
-    let indexToDelete = -1;
+function deleteItem(button) {
+    const card = button.closest('.card');
+    card.remove();
+}
   
-    for (let i = 0; i < dataArray.length; i++) {
-      if (dataArray[i].id === idToDelete) {
-        indexToDelete = i;
-        break;
-      }
-    }
-    let resultDelete = document.getElementById("result");
-  
-    //kondisi hapus data dan data tidak ada
-    if (indexToDelete !== -1) {
-      dataArray.splice(indexToDelete, 1); // Hapus data
-      resultDelete.innerHTML =
-        "Data dengan ID " + idToDelete + " telah dihapus.";
-    } else {
-      resultDelete.innerHTML =
-        "Data dengan ID " + idToDelete + " tidak ditemukan.";
-    }
-    mencetak(dataArray); // Perbarui tabel setelah penghapusan
-  }
 
 function mencetak(){
 
@@ -139,7 +122,7 @@ function mencetak(){
             <p class="card-text">${name} ${years} ${cc / 1000}L </p>
             <p class="card-text">Rp${price}
             <a href="#" class="btn btn-primary">Beli Bang</a>
-            <a href="#" class="btn btn-secondary" on-click="deleteById()">Hapus</a>
+            <a href="#" class="btn btn-secondary" onclick="deleteItem(this)">Hapus</a>
             </div>
           </div>
         </div>
