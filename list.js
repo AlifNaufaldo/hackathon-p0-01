@@ -1,17 +1,9 @@
-// let list = {
-//     brandname: '',
-//     name: '',
-//     cc: '',
-//     years: '',
-//     price: 0,
-// }
-
 let brandname = ['Toyota', 'Honda', 'Daihatsu', 'Nissan', 'Mitsubishi', 'Hino']
 let name = ['Avanza', 'Brio', 'Xenia', 'Skyline', 'L300', 'Hino 700']
 let cc = ['1300', '1200','1000', '2600', '2268', '12913']
 let years = ['2010', '2016', '2022', '2021', '2019', '2024']
 let price = [1000, 5000, 13455, 34531, 423234, 13467]
-//buat push
+
 let data = [
     {"brandname": "Toyota", "name": "Avanza", "cc": 1300, "years": 2010, "price": 1000, "image": "https://akcdn.detik.net.id/visual/2019/02/28/a02dae3a-28ca-49ce-8596-2f165188872f_169.jpeg?w=650&q=90","id": 1},
     {"brandname": "Honda", "name": "Brio", "cc": 1200, "years": 2016, "price": 5000, "image": "https://dealermobilhondabanjarmasin.com/wp-content/uploads/2018/09/Honda-Brio-Banjarmasin-4.jpg", "id": 2},
@@ -85,16 +77,12 @@ function filterhargaterendah(){
     mencetak(data)
 }
 
-// console.log(filterhargaterendah())
-
 function filterhargatertinggi(){
 
     data.sort((a, b) => b.price - a.price)
     
     mencetak(data)
 }
-
-// console.log(filterhargatertinggi());
 
 function deleteItem(button) {
     let parentElement = button.parentElement;
@@ -107,7 +95,6 @@ function deleteItem(button) {
       parentElement.parentNode.removeChild(parentElement);
     }
 }
-  
 
 function mencetak(){
 
@@ -135,6 +122,6 @@ function mencetak(){
         </div>
       `
     }
-    }
+}
     console.log(mencetak());
     
