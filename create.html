@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jual mobil</title>
+  <title>Tambah Data Mobil</title>
 </head>
 <body>
   <h1>Tambah Data Mobil</h1>
 
-  <form id="formulir" onsubmit="createDataBaru()">
+  <div id="formulir">
     <div>
       <label>Nama Brand: </label>
       <input type="text" id="brandname" placeholder="Brand Name">
@@ -31,8 +31,8 @@
       <input type="text" id="price" placeholder="Harga Jual">
     </div>
     
-    <button type="submit">submit</button>
-  </form>
+    <button type="submit" onclick="createDataBaru()">Submit</button>
+  </div>
   <script src="list.js"></script>
 </body>
 </html>
