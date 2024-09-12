@@ -1,18 +1,18 @@
 let currentCarId = null;
 
-function editingCars(text, dataPreFix) {
+function editingCars(text, dataEdit) {
     let result = "";
     let dataPart = false;
-    let dataPreFixLength = dataPreFix.length;
-    let dataPreFixIndex = 0;
+    let dataEditLength = dataEdit.length;
+    let dataEditIndex = 0;
 
     
     for (let x = 0; x < text.length; x++) {
         if (!dataPart) {            
-            if (text[x] === dataPreFix[dataPreFixIndex]) {
-                dataPreFixIndex++;
+            if (text[x] === dataEdit[dataEditIndex]) {
+                dataEditIndex++;
                 
-                if (dataPreFixIndex === dataPreFixLength) {
+                if (dataEditIndex === dataEditLength) {
                     dataPart = true;
                 }
             } else {   
@@ -37,7 +37,28 @@ function removeChar(text) {
 }
 
 function editCar(carId) {
-    currentCarId = carId;
+  let data = [
+    {"brandname": "Toyota", "name": "Avanza", "cc": 1300, "years": 2010, "price": 1000, "id": 1},
+    {"brandname": "Honda", "name": "Brio", "cc": 1200, "years": 2016, "price": 5000, "id": 2},
+    {"brandname": "Daihatsu", "name": "Xenie", "cc": 1000, "years": 2022, "price": 13455, "id": 3},
+    {"brandname": "Nissan", "name": "Skyline", "cc": 2600, "years": 2021, "price": 34531, "id": 4},
+    {"brandname": "Mitsubishi", "name": "L300", "cc": 2268, "years": 2019, "price": 423234, "id": 5},
+    {"brandname": "Hino", "name": "Hino 700", "cc": 12913, "years": 2024, "price": 13467, "id": 6},
+]
+let selectedCar = null;
+
+    for (let x = 0; x < data.length; x++) {
+      if (data[x].id === carId) {
+        selectedCar = data[x];
+        break;
+      }
+    }
+
+    if (selectedCar !== null) {
+      return "Mobil ditemukan: " + ("Brand: " + selectedCar.brandname) + ("Name: " + selectedCar.name) + ("Engine Capacity: " + selectedCar.cc) + ("Years: " + selectedCar.years) + ("Price: Rp " + selectedCar.price);
+    } else {
+      console.log("Mobil dengan ID " + carId + " tidak ditemukan.");
+    }
 
     const brandText = document.getElementById(carId + "Brand").textContent;
     const typeText = document.getElementById(carId + "Type").textContent;
