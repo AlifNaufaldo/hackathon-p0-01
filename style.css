@@ -18,7 +18,7 @@ body {
   }
 
   .container1{
-    
+
     width: 45%;
     height:30%;
     background-color: white;
@@ -27,21 +27,26 @@ body {
     margin-bottom: 15px;
     float: left;
     padding: 12px;
+    height: 225px;
   }
 
   #editbuttonbeneran{
-    
+
     background-color: rgb(13, 14, 14);
     color: white;
     text-align: center;
+    justify-content: center;
     padding: 5px;
-    
+    margin-top: 300px;
+    position: absolute;
+    display: flex;
+    margin-left: 600px;
   }
 
-  
+
 
   #editbutton{
-    
+
     color: rgb(243, 240, 240);
     background-color: rgb(13, 14, 14);
     text-align: center;
@@ -49,6 +54,14 @@ body {
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 
   h2 {

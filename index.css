@@ -9,6 +9,13 @@ body {
   margin: 0;
   padding: 20px;
 }
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
 .container {
   max-width: 1200px;

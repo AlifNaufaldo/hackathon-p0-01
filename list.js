@@ -5,7 +5,7 @@ let years = ['2010', '2016', '2022', '2021', '2019', '2024']
 let price = [1000, 5000, 13455, 34531, 423234, 13467]
 
 let data = [
-    { "brandname": "Toyota", "name": "Avanza", "cc": 1300, "years": 2010, "price": 1000, "image": "https://akcdn.detik.net.id/visual/2019/02/28/a02dae3a-28ca-49ce-8596-2f165188872f_169.jpeg?w=650&q=90", "id": 1 },
+    { "brandname": "Toyota", "name": "Avanza", "cc": 1300, "years": 2010, "price": 1000, "image": "https://www.blibli.com/friends-backend/wp-content/uploads/2017/10/Desain-tanpa-judul-35.jpg", "id": 1 },
     { "brandname": "Honda", "name": "Brio", "cc": 1200, "years": 2016, "price": 5000, "image": "https://dealermobilhondabanjarmasin.com/wp-content/uploads/2018/09/Honda-Brio-Banjarmasin-4.jpg", "id": 2 },
     { "brandname": "Daihatsu", "name": "Xenia", "cc": 1000, "years": 2022, "price": 13455, "image": "https://asset-2.tstatic.net/tribunnews/foto/bank/images/daihatsu-xenia1.jpg", "id": 3 },
     { "brandname": "Nissan", "name": "Skyline", "cc": 2600, "years": 2021, "price": 34531, "image": "https://www.nissanusa.com/content/dam/Nissan/us/experience_nissan/newsevents/skyline-to-gt-r/2024-nissan-gtr-special-edition.jpg.ximg.l_6_h.smart.jpg", "id": 4 },
@@ -81,10 +81,10 @@ function filterhargatertinggi() {
 }
 
 function deleteItem(button) {
-    const card = button.closest('.card');
-    card.remove();
+    const card = button.closest('.card')
+    card.remove()
 }
-  
+
 
 function mencetak() {
 
@@ -106,12 +106,11 @@ function mencetak() {
             <p class="card-text">${name} ${years} ${cc / 1000}L </p>
             <p class="card-text">Rp${price}
         <a href="checkout.html?brandname=${brandname}&image=${image}&name=${name}&years=${years}&cc=${cc}&price=${price}" class="btn btn-primary">Beli Bang</a>
-            <a href="#" class="btn btn-secondary" onclick="deleteItem(this)">Hapus</a>
+            <a href="#" class="btn btn-secondary" onclick="deleteItem(this)" style="display: none;">Hapus</a>
             </div>
           </div>
         </div>
       `
     }
 }
-mencetak();
-    
+mencetak()

@@ -1,79 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Update Item</title>
-    <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/uploads/white-x5-bmw-png-image-free-download--white-x5-bmw-png-image-free--21.png">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.freeiconspng.com/uploads/white-x5-bmw-png-image-free-download--white-x5-bmw-png-image-free--21.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!-- navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.html">FUFUFAFA</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="create.html">Tambah Item</a></li>
-            <li class="nav-item"><a class="nav-link" href="update.html">Update Item</a></li>
-          </ul>
-        </div>
-      </nav>
-      
-      <div>
-          <!-- Car List -->
-        <h1>Car List:</h1>
-        <!-- Car 1 -->
-        <div class="container1" id="car1">
-            <p id="car1Brand">Brand Name: </p>
-            <p id="car1Type">Type: </p>
-            <p id="car1Capacity">cc: </p>
-            <p id="car1Year">Years: </p>
-            <p id="car1Price">Price: Rp. </p>
-          </div>
+      <a class="navbar-brand" href="index.html">FUFUFAFA</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="create.html">Tambah Item</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="update.html">Update Item</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-          <div class="container1" id="editForm" style="display:none;">
-            <h2 >Edit Mobil</h2>
-            <label for="editBrand">Brand Name:</label>
-            <input type="text" id="editBrand" placeholder="Brand Name" required><br>
-    
-            <label for="editType">Type:</label>
-            <input type="text" id="editType" placeholder="Type Car" required><br>
-    
-            <label for="editCapacity">Engine Capacity:</label>
-            <input type="number" id="editCapacity" placeholder="cc" required><br>
-    
-            <label for="editYear">Years:</label>
-            <input type="number" id="editYear" placeholder="assembly Years" required><br>
-    
-            <label for="editPrice">Price:</label>
-            <input type="number" id="editPrice" placeholder="(IDR)" required><br>
-    
-            <button id = "editbutton" onclick="saveEdit()">Save</button>
-            <button id = "editbutton" onclick="cancelEdit()">Cancel</button>
-        </div>
-        
-       
+    <div>
+      <!-- Car List -->
+      <h1>Update Item:</h1>
+      <!-- Car 1 -->
+      <div class="container1" id="car1">
+        <p id="car1Brand">Brand Name:</p>
+        <p id="car1Type">Type:</p>
+        <p id="car1Capacity">cc:</p>
+        <p id="car1Year">Years:</p>
+        <p id="car1Price">Price: Rp.</p>
+      </div>
 
-        <!-- Car 2 -->
-        <!-- <div class="container1" id="car2">
+      <div class="container1" id="editForm" style="display: none">
+        <h2>Edit Mobil</h2>
+        <label for="editBrand">Brand Name:</label>
+        <input
+          type="text"
+          id="editBrand"
+          placeholder="Brand Name"
+          required
+        /><br />
+
+        <label for="editType">Type:</label>
+        <input
+          type="text"
+          id="editType"
+          placeholder="Type Car"
+          required
+        /><br />
+
+        <label for="editCapacity">Engine Capacity:</label>
+        <input
+          type="number"
+          id="editCapacity"
+          placeholder="cc"
+          required
+        /><br />
+
+        <label for="editYear">Years:</label>
+        <input
+          type="number"
+          id="editYear"
+          placeholder="assembly Years"
+          required
+        /><br />
+
+        <label for="editPrice">Price:</label>
+        <input
+          type="number"
+          id="editPrice"
+          placeholder="(IDR)"
+          required
+        /><br />
+        <div>
+          <button id="editbutton" onclick="saveEdit()">Save</button>
+          <button id="editbutton" onclick="cancelEdit()">Cancel</button>
+        </div>
+      </div>
+
+      <!-- Car 2 -->
+      <!-- <div class="container1" id="car2">
             <p id="car2Brand">Brand Name: </p>
             <p id="car2Type">Type: </p>
             <p id="car2Capacity">cc: </p>
@@ -82,13 +114,12 @@
             <button  class = "recommended-btn" onclick="editCar(2)">Edit</button>
         </div> -->
     </div>
-
-    <button  id = "editbuttonbeneran" onclick="editCar(1)">Edit</button>
-
+    <div class="edit">
+      <button id="editbuttonbeneran" onclick="editCar(1)">Edit</button>
+    </div>
     <!-- Form Edit Car -->
-   
 
     <script src="update.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>

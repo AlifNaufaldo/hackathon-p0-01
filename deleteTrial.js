@@ -19,7 +19,7 @@ let data = [
     years: 2010,
     price: 1000,
     image:
-      "https://akcdn.detik.net.id/visual/2019/02/28/a02dae3a-28ca-49ce-8596-2f165188872f_169.jpeg?w=650&q=90",
+      "https://auto2000.co.id/berita-dan-tips/_next/image?url=https%3A%2F%2Fastradigitaldigiroomuat.blob.core.windows.net%2Fstorage-uat-001%2Favanza-berapa-cc.png&w=3840&q=75",
     id: 1,
   },
   {
@@ -72,23 +72,23 @@ let data = [
       "https://hino.co.id/assets/uploads/categories_child/unit_home-2023-03.png",
     id: 6,
   },
-];
+]
 
 // Fungsi untuk menghapus data berdasarkan ID
 
 function deleteCar(id) {
-  let index = -1;
+  let index = -1
 
-  for (let x = 0; x < data.length; x++) {
+  for (let x = 0;x < data.length;x++) {
     if (data[x].id === id) {
-      index = x;
-      break;
+      index = x
+      break
     }
   }
   if (index !== -1) {
-    data.splice(index, 1);
+    data.splice(index, 1)
   }
-  renderCarList();
+  renderCarList()
 }
 
 // Fungsi untuk menampilkan data ke tabel
