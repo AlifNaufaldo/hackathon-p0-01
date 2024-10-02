@@ -25,7 +25,7 @@ function mencetak() {
         <h5 class="card-title">${brandname}</h5>
         <p class="card-text">${name} ${years} ${cc / 1000}L </p>
         <p class="card-text">Rp${price}
-        <a href="#" class="btn btn-primary">Beli Bang</a>
+        <a href="#" class="btn btn-primary">Beli</a>
         <a href="#" class="btn btn-secondary" on click>Detail</a>
         </div>
       </div>

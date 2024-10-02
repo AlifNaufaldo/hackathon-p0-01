@@ -26,7 +26,7 @@ function createDataBaru() {
   let image = document.getElementById('image').value
 
   if (!brandName || !model || !cc || !years || !price) {
-    alert(`DATA HARUS DIISI! NIAT JUALAN GAK SIH?`)
+    alert(`Wajib diisi`)
     return
   }
 

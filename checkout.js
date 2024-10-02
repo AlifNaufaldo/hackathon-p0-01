@@ -15,7 +15,7 @@ cetak.innerHTML += `
         <h5 class="card-title">${brandname}</h5>
         <p class="card-text">${name} ${years} ${cc / 1000}L </p>
         <p class="card-text-price">Rp${price}</p>
-        <a href="#" class="btn btn-primary">di klik laku nih</a>
+        <a href="#" class="btn btn-primary">Checkout</a>
         </div>
       </div>
     </div>
