@@ -10,7 +10,7 @@ let data = [
   { "brandname": "Daihatsu", "name": "Xenia", "cc": 1000, "years": 2022, "price": 13455, "image": "https://asset-2.tstatic.net/tribunnews/foto/bank/images/daihatsu-xenia1.jpg", "id": 3 },
   { "brandname": "Nissan", "name": "Skyline", "cc": 2600, "years": 2021, "price": 34531, "image": "https://www.nissanusa.com/content/dam/Nissan/us/experience_nissan/newsevents/skyline-to-gt-r/2024-nissan-gtr-special-edition.jpg.ximg.l_6_h.smart.jpg", "id": 4 },
   { "brandname": "Mitsubishi", "name": "L300", "cc": 2268, "years": 2019, "price": 423234, "image": "https://www.sunstarmotor.id/wp-content/uploads/2020/05/l300-web-catalogue-458x420.jpg", "id": 5 },
-  { "brandname": "Hino", "name": "Hino 700", "cc": 12913, "years": 2024, "price": 13467, "image": "https://hino.co.id/assets/uploads/categories_child/unit_home-2023-03.png", "id": 6 },
+  { "brandname": "Hino", "name": "Hino 700", "cc": 12913, "years": 2024, "price": 13467, "image": "https://www.hino.co.id/product-list/euro4/3https://images.bisnis.com/posts/2017/09/15/690300/hino.jpg", "id": 6 },
 ]
 
 let defaultImage = "https://www.freeiconspng.com/uploads/transport-car-icon--6.png"
@@ -105,7 +105,7 @@ function mencetak() {
             <h5 class="card-title">${brandname}</h5>
             <p class="card-text">${name} ${years} ${cc / 1000}L </p>
             <p class="card-text">Rp${price}
-        <a href="checkout.html?brandname=${brandname}&image=${image}&name=${name}&years=${years}&cc=${cc}&price=${price}" class="btn btn-primary">Beli Bang</a>
+        <a href="checkout.html?brandname=${brandname}&image=${image}&name=${name}&years=${years}&cc=${cc}&price=${price}" class="btn btn-primary">Beli</a>
             <a href="#" class="btn btn-secondary" onclick="deleteItem(this)">Hapus</a>
             </div>
           </div>
